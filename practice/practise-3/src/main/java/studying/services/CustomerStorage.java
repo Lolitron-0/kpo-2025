@@ -1,6 +1,7 @@
 package studying.services;
 
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 import studying.domains.Customer;
 import studying.interfaces.ICustomerProvider;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * Storage & provider for customers
  */
 @ToString
+@Component
 public class CustomerStorage implements ICustomerProvider {
     private List<Customer> customers = new ArrayList<>();
 

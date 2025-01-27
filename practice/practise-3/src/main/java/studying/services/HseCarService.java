@@ -1,21 +1,19 @@
 package studying.services;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 import studying.interfaces.ICarProvider;
 import studying.interfaces.ICustomerProvider;
 
 import java.util.Objects;
 
+@Component
+@RequiredArgsConstructor
 public class HseCarService {
 
     private final ICarProvider carProvider;
 
     private final ICustomerProvider customerProvider;
-
-    public HseCarService(ICarProvider carProvider, ICustomerProvider customersProvider)
-    {
-        this.carProvider = carProvider;
-        this.customerProvider = customersProvider;
-    }
 
     /**
      * Try to provide customers with cars

@@ -1,6 +1,7 @@
 package studying.services;
 
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 import studying.domains.Car;
 import studying.domains.Customer;
 import studying.interfaces.ICarFactory;
@@ -13,6 +14,7 @@ import java.util.List;
  * Car provider implementation
  */
 @ToString
+@Component
 public class CarService implements ICarProvider {
 
     private final List<Car> cars = new ArrayList<>();
